@@ -1,0 +1,27 @@
+{
+  "name": "qa-school-2-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"nothing in here\"",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viraxslot/qa-school-2-api.git"
+  },
+  "keywords": [],
+  "author": "Alex Vershinin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viraxslot/qa-school-2-api/issues"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
