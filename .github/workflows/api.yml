@@ -2,7 +2,7 @@ on:
     push:
         branches:
             - main
-            - add-newman-tests
+            - 02-testrail-reporter
 
 jobs:
     run_api_tests:
