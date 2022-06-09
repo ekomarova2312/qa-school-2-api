@@ -18,10 +18,8 @@ jobs:
               run: npm ci
 
             - name: Start server
-              shell: bash
               run: |
                   npm start
-                  sleep 5s
 
             - name: Run API tests
               run: |
