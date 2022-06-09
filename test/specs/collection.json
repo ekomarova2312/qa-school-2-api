@@ -21,16 +21,36 @@
 									"",
 									"pm.test(\"C1 Check body contains correct data\", function () {",
 									"    const body = pm.response.json()",
-									"    pm.expect(body.message).equals('Hello from the server!')",
+									"    const testName = pm.iterationData.get(\"value\") ?? \"Noname\"",
+									"    pm.expect(body.message).equals(\"Hello, \" + testName)",
 									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const testName = pm.iterationData.get(\"value\") ?? \"Noname\"",
+									"pm.environment.set(\"testName\", testName)"
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{testName}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/api",
 							"host": [
