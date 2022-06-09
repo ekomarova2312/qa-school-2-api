@@ -24,7 +24,7 @@ jobs:
                   sleep 5s &&
                   npm test:ci
               env:
-                  TESTRAIL_DOMAIN: viraxslot001.testrail.io/index.php
                   TESTRAIL_PROJECTID: 1
+                  TESTRAIL_DOMAIN: ${{ secrets.TESTRAIL_DOMAIN }}
                   TESTRAIL_USERNAME: ${{ secrets.TESTRAIL_USERNAME }}
                   TESTRAIL_APIKEY: ${{ secrets.TESTRAIL_APIKEY }}
