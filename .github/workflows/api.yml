@@ -1,0 +1,20 @@
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+
+            - name: Start server
+              run: |
+                  npm start
+                  sleep 5
+
+            - name: Run API tests
+              run: |
+                  npm test
