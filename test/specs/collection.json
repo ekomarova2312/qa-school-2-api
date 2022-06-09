@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "cf79d06c-704e-443c-b0e6-79b63fe150d7",
+		"name": "Test simple server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check server works",
+			"item": [
+				{
+					"name": "check the main request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Check body contains correct data\", function () {",
+									"    const body = pm.response.json()",
+									"    pm.expect(body.message).equals('Hello from the server!')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

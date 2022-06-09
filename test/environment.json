@@ -1,0 +1,15 @@
+{
+	"id": "82036d6c-2b29-4b68-b56d-d6b8f6e3f094",
+	"name": "Simple server environment",
+	"values": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-06-09T17:08:24.287Z",
+	"_postman_exported_using": "Postman/9.18.2"
+}
