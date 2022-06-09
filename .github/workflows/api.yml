@@ -18,8 +18,7 @@ jobs:
               run: npm ci
 
             - name: Run API tests
-              uses: BerniWittmann/background-server-action@latest
-              with:
-                  command: npm test
-                  start: npm start
-                  wait-on: "http://localhost:3000"
+              run: |
+                  npm start &
+                  sleep 5s &&
+                  npm test
