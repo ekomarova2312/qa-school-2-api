@@ -21,7 +21,7 @@ jobs:
               run: |
                   npm start &
                   sleep 5s &&
-                  npm test:ci
+                  npm run test:ci
 
               env:
                   TESTRAIL_PROJECTID: 1
