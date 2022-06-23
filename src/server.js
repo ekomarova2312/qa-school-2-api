@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.post("/api", (req, res) => {
     const name = req.body.name;
     res.json({
-        message: `Hello, ${name}`,
+        message: `Hello, ${name} test`,
     });
 });
 
