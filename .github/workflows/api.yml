@@ -21,4 +21,10 @@ jobs:
               run: |
                   npm start &
                   sleep 5s &&
-                  npm test
+                  npm test:ci
+
+              env:
+                  TESTRAIL_PROJECTID: 1
+                  TESTRAIL_DOMAIN: ${{ secrets.TESTRAIL_DOMAIN }}
+                  TESTRAIL_USERNAME: ${{ secrets.TESTRAIL_USERNAME }}
+                  TESTRAIL_APIKEY: ${{ secrets.TESTRAIL_APIKEY }}
