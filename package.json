@@ -4,26 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "newman run test/specs/collection.json -e test/environment.json",
-    "test:ci": "newman run test/specs/collection.json -e test/environment.json -r cli,testrail",
+    "test": "newman run test/specs/qa-school-2-api.collection.json -e test/env.json",
+    "test:ci": "newman run test/specs/qa-school-2-api.collection.json -e test/env.json -r cli,testrail",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viraxslot/qa-school-2-api.git"
+    "url": "git+https://github.com/ekomarova2312/qa-school-2-api"
   },
   "keywords": [],
-  "author": "Alex Vershinin",
+  "author": " ",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/viraxslot/qa-school-2-api/issues"
+    "url": "https://github.com/ekomarova2312/qa-school-2-api/issues"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
     "newman": "^5.3.2",
-    "newman-reporter-testrail": "^1.0.49"
+    "newman-reporter-testrail": "^1.0.49",
+    "testrail": "^0.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
